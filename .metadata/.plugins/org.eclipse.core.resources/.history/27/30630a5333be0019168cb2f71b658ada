@@ -1,0 +1,14 @@
+package singlyLinkedList;
+
+public class Main {
+public static void main(String[] args) {
+	SinglyLinkedList list = new SinglyLinkedList();
+	
+	list.insertAtBeginning(1);
+	list.insertAtBeginning(2);
+	list.insertAtBeginning(3);
+	list.insertAtBeginning(7);
+	list.insertAtBeginning(90);
+	list.display();
+}
+}

@@ -1,0 +1,45 @@
+package singlyLinkedList;
+
+public class SinglyLinkedList {
+	private Node head;
+	private int length;
+	
+	
+	public SinglyLinkedList insertAtEnd(int value) {
+		if(head==null) {
+			head = new Node();
+			head.setValue(value);
+		}else {
+			Node current = head;
+			while(current.getNext() !=null) {
+				current = current.getNext();
+			}
+			
+			Node node = new Node();
+			node.setValue(value);
+			current.setNext(node);
+		}
+		length++;
+		return this;
+	}
+	
+	public void insertAtBeginning(int data) {
+		Node node = new Node(data);
+		node.setNext(head);
+		head = node;
+	}
+	
+	public void insert(int data, int position) {
+		
+		if(position > len)
+	}
+	
+	
+	public void display() {
+		Node current = head;
+		while(current !=null) {
+			System.out.print(current.getValue()+", ");
+			current = current.getNext();
+		}
+	}
+}

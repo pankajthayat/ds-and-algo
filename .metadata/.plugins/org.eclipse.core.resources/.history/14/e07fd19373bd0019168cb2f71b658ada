@@ -1,0 +1,21 @@
+package singlyLinkedList;
+
+public class Node {
+	private int value;
+	private Node next;
+	public int getValue() {
+		return value;
+	}
+	public Node setValue(int value) {
+		this.value = value;
+		return this;
+	}
+	public Node getNode() {
+		return next;
+	}
+	public Node setNode(Node node) {
+		this.next = node;
+		return this;
+	}
+	
+}

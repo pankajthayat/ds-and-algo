@@ -1,0 +1,29 @@
+package singlyLinkedList;
+
+public class SinglyLinkedList {
+	private Node head;
+	
+	
+	public void insert(int value) {
+		if(head==null) {
+			head = new Node();
+			head.setNode(null).setValue(value);
+		}else {
+			Node current = head;
+			while(current !=null) {
+				current = current.getNode();
+			}
+			
+			current =new Node();
+			current.setValue(value);
+		}
+	}
+	
+	public void display() {
+		Node current = head;
+		while(current !=null) {
+			System.out.println(current.getValue()+", ");
+			current = current.getNode();
+		}
+	}
+}
