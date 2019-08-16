@@ -25,10 +25,8 @@ public class SinglyLinkedList {
 	
 	public void insertAtEnd2(int data) {
 		
-		if(head == null) { 
-			Node node = new Node(data);
-			head = node;
-		}
+		if(head == null) 
+			head.setValue(data);
 		else {
 			Node node = new Node(data);
 			Node pre, nxt;
@@ -76,32 +74,10 @@ public class SinglyLinkedList {
 		else {
 			head = head.getNext();
 		}
-		return returnValue;
+		retu
 	}
 	
-	public Node deleteAtEnd() {
-		if(head == null) return null;
-		
-		Node pre = head, current = head;
-		
-		while(current.getNext() !=null) {
-			pre =current;
-			current = current.getNext();
-		}
-		if(pre == current) // when head.getNext() == null .... be careful of this situation when pre =cur alway, everywhere..
-			head = null;
-		pre.setNext(null);//pre.setNext(current.getNext());
-		return current;
-	}
-	
-	public Node deleteAtPos(int position) {
-		
-		return null;
-	}
-	
-	
-	
-	public void removeData(int data) {// it will remove the 1st matched data
+	public void deleteData(int data) {// it will delete the 1st matched data
 		if(head == null) throw new RuntimeException("list is empty");
 		
 		Node preNode = null;

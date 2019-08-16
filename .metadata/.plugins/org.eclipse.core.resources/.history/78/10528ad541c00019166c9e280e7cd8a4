@@ -94,14 +94,7 @@ public class SinglyLinkedList {
 		return current;
 	}
 	
-	public Node deleteAtPos(int position) {
-		
-		return null;
-	}
-	
-	
-	
-	public void removeData(int data) {// it will remove the 1st matched data
+	public void deleteData(int data) {// it will delete the 1st matched data
 		if(head == null) throw new RuntimeException("list is empty");
 		
 		Node preNode = null;

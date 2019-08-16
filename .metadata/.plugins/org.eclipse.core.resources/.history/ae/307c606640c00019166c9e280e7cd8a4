@@ -9,23 +9,11 @@ public static void main(String[] args) {
 	list.insertAtEnd(3);
 	list.insertAtEnd(7);
 	list.display();
-	list.deleteAtEnd();
+	list.deleteAtStart();
 	list.display();
-	
-	list.deleteAtEnd();
-	list.display();
-	
-	list.deleteAtEnd();
-	list.display();
-	
-	Node node = list.deleteAtEnd();
-	list.display();
-	
-	System.out.println("**** THE END ****"+node.getValue());
+	System.out.println();
 	
 	
-	list.display();
-//	
 	list.insertAtEnd2(1);
 	list.insertAtEnd2(2);
 	list.insertAtEnd2(3);
