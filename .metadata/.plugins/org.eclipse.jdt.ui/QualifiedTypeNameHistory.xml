@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="singlyLinkedList.SinglyLinkedList"/>
-    <fullyQualifiedTypeName name="singlyLinkedList.Node"/>
-    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="singlyLinkedList.Node"/>
+    <fullyQualifiedTypeName name="doublyLinkedList.Node"/>
+    <fullyQualifiedTypeName name="doublyLinkedList.DoublyLinkedList"/>
+    <fullyQualifiedTypeName name="sun.security.util.DisabledAlgorithmConstraints"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="playground.Animal"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="playground.Dog"/>
+    <fullyQualifiedTypeName name="jdk.internal.org.jline.reader.Widget"/>
 </qualifiedTypeNameHistroy>
