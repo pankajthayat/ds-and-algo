@@ -1,9 +1,9 @@
 package binarySearchTree;
 
 public class Node {
-private int data;
-private Node left;
-private Node right;
+ int data;
+ Node left;
+ Node right;
 
 
 public Node(int data) {
@@ -32,6 +32,20 @@ public Node setRight(Node right) {
 	return this;
 }
 
+
+ void insert(int data) {
+	 if(this.data>data) {
+		 if(this.left==null)
+			 this.left =  new Node(data);
+		 else
+			 this.left.insert(data);
+	 }else {
+		 if(right == null)
+			 right =  new Node(data);
+		 else
+			 right.insert(data);
+	 }
+ }
 
 
 }

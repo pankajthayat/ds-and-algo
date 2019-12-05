@@ -2,36 +2,32 @@ package singlyLinkedList;
 
 public class Main {
 public static void main(String[] args) {
+	int x=4;
 	SinglyLinkedList list = new SinglyLinkedList();
+	SinglyLinkedList list2 = new SinglyLinkedList();
 	
 	list.insertAtEnd(1);
 	list.insertAtEnd(2);
-	list.insertAtEnd(3);
-	list.insertAtEnd(7);
-	list.display();
-	list.deleteAtEnd();
-	list.display();
+	list.insertAtEnd(5);
+	list.insertAtEnd(6);
+	list.insertAtEnd(8);
 	
-	list.deleteAtEnd();
-	list.display();
+//	System.out.println("l :  "+list);
 	
-	list.deleteAtEnd();
-	list.display();
-	
-	Node node = list.deleteAtEnd();
-	list.display();
-	
-	System.out.println("**** THE END ****"+node.getValue());
-	
+	justChecking(list.head);
 	
 	list.display();
-//	
-	list.insertAtEnd2(1);
-	list.insertAtEnd2(2);
-	list.insertAtEnd2(3);
-	list.insertAtEnd2(7);
-	list.display();
-//	list.insert(99, 5);
-//	list.display();
+	
+}
+
+public static void justChecking(Node head ) {
+	if(head!=null) {
+		justChecking(head.next);
+		if(head.value == 5) {
+			Node t = new Node(55555555);
+			t.next = head.next;
+			head.next =t;
+		}
+	}
 }
 }

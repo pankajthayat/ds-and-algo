@@ -1,8 +1,8 @@
 package singlyLinkedList;
 
 public class Node {
-	private int value;
-	private Node next;
+	 int value;
+	 Node next;
 	public int getValue() {
 		return value;
 	}
