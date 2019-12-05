@@ -5,6 +5,15 @@ public class BinarySearchTree {
 	public Node root;
 	
 	
+	public Node findMinimum(Node root){
+	
+		if(root.left==null)
+			return root;
+		else
+			return findMinimum(root.left);
+	}
+	
+	
 	public Node find(Node root, int data) {
 		if(root == null)
 			return root;

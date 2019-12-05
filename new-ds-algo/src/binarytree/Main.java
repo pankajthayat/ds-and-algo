@@ -23,7 +23,7 @@ public class Main {
 //		binaryTree.preOrder();
 		
 		Node root = binaryTree.root;
-	binaryTree.topView(root);
+//	binaryTree.topView(root);
 		
 //		System.out.println("max no : "+binaryTree.findMax());
 		binaryTree.inorder();
