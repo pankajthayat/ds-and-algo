@@ -1,9 +1,38 @@
 package bst;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
+
 public class BinarySearchTree {
 
 	public Node root;
 	
+	
+	List<Integer> inorderList(Node root) {
+		Node c= root;
+		List<Integer> list = new ArrayList();
+//		Queue<Node> q= new LinkedList<Node>();
+		Stack<Node> q = new Stack<Node>();
+		q.add(c);
+		while(!q.isEmpty()) {
+			if(c!=null && c.left!=null ) {
+				c=c.left;
+				q.add(c);
+			} else {
+				c = q.pop();
+				list.add(c.data);
+				c = c.right;
+				if(c!=null)
+					q.add(c);
+			}
+		}
+		
+		return list;
+		
+	}
 	
 	public Node findMinimum(Node root){
 	

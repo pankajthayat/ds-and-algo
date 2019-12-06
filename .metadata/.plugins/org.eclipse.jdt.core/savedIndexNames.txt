@@ -1,2 +1,0 @@
-INDEX VERSION 1.129+C:\Users\674206\Desktop\learning\ds-and-algo\.metadata\.plugins\org.eclipse.jdt.core
-2139203028.index
