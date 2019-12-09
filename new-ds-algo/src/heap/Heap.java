@@ -30,8 +30,19 @@ public class Heap {
 	}
 	
 	
-	public void percolateDown() {
-		
+	public void percolateDown(int index) {
+		if(index<0 || index >= count)
+			return;
+		int left = leftChild(index);
+		int right = rightChild(index);
+		int max = arr[index]<arr[left] ? left :index;
+		max = arr[max] < arr[right] ? right:max;
+		if(max!=index){
+			int temp = arr[index];
+			arr[index] =arr[max];
+			arr[max] = temp;
+			percolateDown(max);
+		}
 	}
 	 
 	public int leftChild(int index) {
