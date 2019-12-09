@@ -44,7 +44,10 @@ public static void main(String[] args) {
 	System.out.println();
 
 	
-//    boolean checkBST(Node root) {
+//	boolean checkBST(Node root) {
+//        if(root == null)
+//            return true;
+//        
 //        boolean isBst =true;
 //        Node c = root;
 //        Stack<Node> s = new Stack();
@@ -52,7 +55,7 @@ public static void main(String[] args) {
 //        List<Integer> list = new ArrayList();
 //        List<Integer> list2 = new ArrayList();
 //        while(!s.isEmpty()){
-//            if(c.left!=null){
+//            if(c!=null && c.left!=null){
 //                c=c.left;
 //                s.add(c);
 //            } else{
@@ -65,10 +68,10 @@ public static void main(String[] args) {
 //        }
 //        
 //        list2.addAll(list);
-//        list.sort((x,y)->x.compareTo(y));
+//        Collections.sort(list);
 //        
 //        for(int i=0;i<list.size();i++){
-//            if(list.get(i) == list2.get(i))
+//            if(list.get(i) != list2.get(i))
 //                isBst = false;
 //        }
 //        return isBst;
