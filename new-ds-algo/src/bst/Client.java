@@ -10,73 +10,23 @@ public class Client {
 public static void main(String[] args) {
 	
 	BinarySearchTree bst = new BinarySearchTree();
-	bst.insert(10);
+	bst.insert(50);
 	bst.insert(30);
+	bst.insert(80);
+	bst.insert(20);
 	bst.insert(40);
-	bst.insert(6);
-	bst.insert(3);
-	bst.insert(1);
-	
-	
-	bst.inorder(bst.root);
-	
-	System.out.println();
-	
-	
-	List<Integer> l = bst.inorderList(bst.root);
-	
-	System.out.println("list : "+ l);
-	
-	List<Integer> demo = new ArrayList<Integer>();
-	List<Integer> demo2 = new ArrayList<Integer>();
-	
-	demo.add(1);
-	demo.add(20);
-	demo.add(3);
-	demo.add(44);
-	demo.add(15);
-	demo2.addAll(demo);
-	System.out.println("demo2 : "+demo2);
-//	demo.sort((x,y)->x.compareTo(y));
-	Collections.sort(demo2);
-	System.out.println("demo  : "+demo);
-	System.out.println("demo2 : "+demo2);
-	System.out.println();
+	bst.insert(70);
+	bst.insert(75);
+	bst.insert(78);
+	bst.insert(90);
+	int n = bst.findDiameter(bst.root);
+	System.out.println("dia : "+n);
+	System.out.println("h : "+bst.findHeight(bst.root, 0));
+	System.out.println("d : --- : "+bst.diameter);
 
-	
-//	boolean checkBST(Node root) {
-//        if(root == null)
-//            return true;
-//        
-//        boolean isBst =true;
-//        Node c = root;
-//        Stack<Node> s = new Stack();
-//        s.add(c);
-//        List<Integer> list = new ArrayList();
-//        List<Integer> list2 = new ArrayList();
-//        while(!s.isEmpty()){
-//            if(c!=null && c.left!=null){
-//                c=c.left;
-//                s.add(c);
-//            } else{
-//                c = s.pop();
-//                list.add(c.data);
-//                c = c.right;
-//                if(c!=null)
-//                    s.add(c);
-//            }
-//        }
-//        
-//        list2.addAll(list);
-//        Collections.sort(list);
-//        
-//        for(int i=0;i<list.size();i++){
-//            if(list.get(i) != list2.get(i))
-//                isBst = false;
-//        }
-//        return isBst;
-//    }
-	
+}
 
+public static void demo(int x) {
+	System.out.println(" x : "+x);
 }
 }

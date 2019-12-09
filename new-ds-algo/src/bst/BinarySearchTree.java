@@ -9,6 +9,7 @@ import java.util.Stack;
 public class BinarySearchTree {
 
 	public Node root;
+	public static int diameter;
 	
 	
 	List<Integer> inorderList(Node root) {
@@ -32,6 +33,42 @@ public class BinarySearchTree {
 		
 		return list;
 		
+	}
+
+	public int findDiameter(Node root) {
+		
+		Stack<Node> s = new Stack();
+		s.push(root);
+		int sum=0;
+		while(!s.isEmpty()) {
+			Node n = s.pop();
+			if(n.right!=null)
+				s.push(n.right);
+			if(n.left!=null)
+				s.push(n.left);
+			
+			int h1 = findHeight(root.left, 0);
+			int h2 = findHeight(root.right, 0);
+			if(sum<h1+h2+1)
+				sum = h1+h2+1;
+			
+		}
+		return sum;
+	}
+	
+	int findHeight(Node root, int h) {
+		if(root == null)
+			return h;
+		else {
+			int h1 = findHeight(root.left, h+1);
+			int h2 = findHeight(root.right, h+1);
+			if((h1+h2)-1>diameter) {
+				System.out.println("h1: "+h1+"   h2 : "+h2);
+				diameter = (h1+h2)-1;
+			}
+				
+			return h1 > h2 ? h1 : h2;
+		}
 	}
 	
 	public Node findMinimum(Node root){
@@ -98,6 +135,29 @@ public class BinarySearchTree {
 			System.out.print(root.data + ", ");
 			inorder(root.right);
 		}
+	}
+	
+	public void reverseLevelOrder(Node root) {
+		
+		Queue<Node> q= new LinkedList<Node>();
+		q.add(root);
+		List<Integer> list = new ArrayList();
+		while(q.peek()!=null) {
+			Node node = q.poll();
+			list.add(node.data);
+			if(node.right!=null)
+			{
+				q.add(node.right);
+			}
+				
+			if(node.left!=null) {
+				q.add(node.left);
+			}
+				
+		}
+//		System.out.println("list : "+list);
+		for(int i =list.size()-1;i>=0;i--)
+			System.out.print(list.get(i)+", ");
 	}
 
 }
